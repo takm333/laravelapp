@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 //Laravel8以降、App\Http\Controllers内でコントローラを検索しなくなったため書き方が書籍と異なる
 Route::get('hello', 'App\Http\Controllers\HelloController@index');
+Route::post('hello', 'App\Http\Controllers\HelloController@post');
