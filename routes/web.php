@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Laravel8以降、App\Https\Controllers内でコントローラを検索しなくなったため書き方が書籍と異なる
-Route::get('hello/{id?}/{pass?}','App\Http\Controllers\HelloController@index');
+//Laravel8以降、App\Http\Controllers内でコントローラを検索しなくなったため書き方が書籍と異なる
+Route::get('hello', 'App\Http\Controllers\HelloController@index');
