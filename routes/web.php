@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\HelloMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,5 @@ Route::get('/', function () {
 });
 
 //Laravel8以降、App\Http\Controllers内でコントローラを検索しなくなったため書き方が書籍と異なる
-Route::get('hello', 'App\Http\Controllers\HelloController@index');
+Route::get('hello', 'App\Http\Controllers\HelloController@index') -> middleware(HelloMiddleware::class);
 Route::post('hello', 'App\Http\Controllers\HelloController@post');
